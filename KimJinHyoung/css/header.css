@@ -1,0 +1,88 @@
+header{
+  position: sticky;
+  top:35px;
+  z-index: 100;
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDD;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+h1{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 30px);
+  top: calc(0% - 30px);
+  background: #FFF;
+  padding: 5px;
+  box-sizing: content-box;
+  border-radius: 50%;
+}
+h1 img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header p{
+  font-weight: 900;
+  margin-left: 20px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 30px;
+  background: var(--main-color);
+  color:#FFF;
+  border-radius:0 30px 30px 0;
+  font-weight: 100;
+}
+nav.gnb ul{
+  display: flex;
+}
+
+nav.gnb ul li a{
+  position: relative;
+  display: block;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: .9rem;
+  transition: all .3s;
+}
+nav.gnb ul li a:hover{
+  color: var(--main-color);
+}
+nav.gnb ul li a::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 10px;
+  background: #ceecff;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+  transition: all .3s;
+  mix-blend-mode: multiply;
+}
+nav.gnb ul li a:hover::after{
+  width: 100%;
+}
+nav.gnb ul li:nth-child(1) a::before{
+  content: "\f2c1";
+}
+nav.gnb ul li:nth-child(2) a::before{
+  content: "\f542";
+}
+nav.gnb ul li:nth-child(3) a::before{
+  content: "\f02d";
+}
+nav.gnb ul li:nth-child(4) a::before{
+  content: "\f0e0";
+}
+
